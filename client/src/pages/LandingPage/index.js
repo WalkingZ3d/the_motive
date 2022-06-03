@@ -15,7 +15,7 @@ const LandingPage = () => {
         
         <div className='main-container'>
 
-            <div className='image-container fluid'>
+            <div className='image-container'>
                
                 <img src={introGif} alt='Intro Gif' />
                 <div className='typewriter'>
