@@ -7,7 +7,7 @@ body {
   margin: 0;
 
   background-image: url(images/black.JPG);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-size: 100% 100%;
 }
 
