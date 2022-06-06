@@ -1,17 +1,19 @@
-import './index.css';
+import './App.css';
 
 import * as Pages from './pages';
+import { NavBar } from './components';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div id='app' className="container">
+    <div role='app' className="App">
       
       <main>
-
-
+        <NavBar />
+        
         <Routes>
           <Route path="/" element={<Pages.LandingPage />} />
+          <Route path="/user" element={<Pages.UserPage />} />
         </Routes>
       </main>
     </div>

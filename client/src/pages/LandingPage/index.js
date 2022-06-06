@@ -1,15 +1,19 @@
 import React from 'react';
 import introGif from '../../images/intro.gif';
 import TypeWriterEffect from 'react-typewriter-effect';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 const LandingPage = () => {
 
-    // const { text } = useTypewriter({
-    //     words: ['for those who thrive in spontaneity, the.MOTIVE is your way to continue the night'],
-    //     loop: 0
-    // });
+    const navigate = useNavigate();
+
+    // -----> NAVIGATES TO LOGIN / SIGN UP TOGGLE FORM
+    const handleEntry = (e) => {
+        navigate('/user');
+    }
 
     return (
         
@@ -25,7 +29,11 @@ const LandingPage = () => {
                             fontFamily: 'monospace',
                             fontWeight: 500,
                             fontSize: '1.5em', 
-                            color: '#ff5900' 
+                            color: '#ff5900',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginTop: '5px'
                         }}
                         cursorColor='#ff5900'
                         multiText={[ 
@@ -41,11 +49,29 @@ const LandingPage = () => {
                     
                     
                     />
-                    {/* <h1 className='typing-effect'>
-                       {text} <Cursor cursorStyle='_' />
-                    </h1> */}
-                   
+
                 </div>
+
+                <br></br>
+                
+                {/* --- NAVIGATES TO REGISTER/LOGIN PAGE ---- */}
+                <div className='d-grid gap-2'>
+
+                    
+                    <button 
+                        type='button' 
+                        className='enterButton'
+                        onClick={handleEntry}>
+
+                        <span class="text">ENTER</span>
+                    </button>
+
+                    {/* <Button className='enterButton' role='button' size='lg'>
+                        ENTER
+                    </Button> */}
+                </div>
+                   
+                
             
             </div>
 
